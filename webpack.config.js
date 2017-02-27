@@ -17,7 +17,7 @@ const common = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'static/[name].[hash].js',
-    publicPath: '/',
+    publicPath: '.',
   },
 
   plugins: [
@@ -32,7 +32,7 @@ const common = {
       template: './app/index.html',
       inject: false,
       chunks: ['app'],
-      jsassets: [`/static/${manifest.name}.js`],
+      jsassets: [`./static/${manifest.name}.js`],
     }),
     new webpack.DllReferencePlugin({
       context: '.',

@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'static/[name]_[chunkhash].js',
-    publicPath: '/',
+    publicPath: '.',
     library: '[name]_[chunkhash]',
   },
 
